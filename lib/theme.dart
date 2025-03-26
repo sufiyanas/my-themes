@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:hancod_theme/colors.dart';
+import 'package:my_themes/colors.dart';
 
 class AppTheme {
   const AppTheme._();
@@ -12,8 +12,7 @@ class AppTheme {
 
   static final darkTheme = ThemeData(useMaterial3: false);
 
-  static Brightness get currentSystemBrightness =>
-      PlatformDispatcher.instance.platformBrightness;
+  static Brightness get currentSystemBrightness => PlatformDispatcher.instance.platformBrightness;
 
   static void setStatusBarAndNavigationBarColors() {
     SystemChrome.setSystemUIOverlayStyle(

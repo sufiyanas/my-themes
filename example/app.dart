@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
-import 'package:hancod_theme/hancod_theme.dart';
+import 'package:my_themes/buttons.dart';
+import 'package:my_themes/forms.dart';
 
 void main() => runApp(const App());
 
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Hello Hancod!')),
+      appBar: AppBar(title: const Text('Hello world!')),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -56,10 +57,7 @@ class _HomeState extends State<Home> {
                   name: 'age',
                   label: 'Age',
                   decoration: _inputDecoration,
-                  suggestionsCallback: (search) =>
-                      List.generate(100, (index) => index)
-                          .where((element) => '$element'.contains(search))
-                          .toList(),
+                  suggestionsCallback: (search) => List.generate(100, (index) => index).where((element) => '$element'.contains(search)).toList(),
                   itemBuilder: (context, suggestion) => ListTile(
                     title: Text('$suggestion'),
                   ),

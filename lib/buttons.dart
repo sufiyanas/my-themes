@@ -3,7 +3,7 @@ import 'dart:math' as math;
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:hancod_theme/hancod_theme.dart';
+import 'package:my_themes/colors.dart';
 
 enum ButtonStyles { primary, secondary, cancel }
 
@@ -61,8 +61,7 @@ class _AppButtonState extends State<AppButton> {
       child: Ink(
         child: TextButton(
           style: ButtonStyle(
-            padding:
-                WidgetStateProperty.resolveWith((states) => widget.padding),
+            padding: WidgetStateProperty.resolveWith((states) => widget.padding),
             shape: WidgetStateProperty.resolveWith(
               (states) => switch (widget.style) {
                 ButtonStyles.primary => RoundedRectangleBorder(
@@ -83,8 +82,7 @@ class _AppButtonState extends State<AppButton> {
             foregroundColor: WidgetStateProperty.resolveWith(
               (states) => switch (widget.style) {
                 ButtonStyles.primary => AppColors.white,
-                ButtonStyles.secondary =>
-                  widget.color ?? AppColors.primaryColor,
+                ButtonStyles.secondary => widget.color ?? AppColors.primaryColor,
                 ButtonStyles.cancel => widget.color ?? AppColors.primaryColor,
               },
             ),
@@ -98,19 +96,14 @@ class _AppButtonState extends State<AppButton> {
             overlayColor: WidgetStateProperty.resolveWith(
               (states) => switch (widget.style) {
                 ButtonStyles.primary => AppColors.primaryColor.withOpacity(.05),
-                ButtonStyles.secondary =>
-                  (widget.color ?? AppColors.primaryColor).withOpacity(.05),
-                ButtonStyles.cancel =>
-                  (widget.color ?? AppColors.primaryColor).withOpacity(.05),
+                ButtonStyles.secondary => (widget.color ?? AppColors.primaryColor).withOpacity(.05),
+                ButtonStyles.cancel => (widget.color ?? AppColors.primaryColor).withOpacity(.05),
               },
             ),
             elevation: WidgetStateProperty.all(6),
             shadowColor: WidgetStateProperty.resolveWith(
               (states) => switch (widget.style) {
-                ButtonStyles.primary ||
-                ButtonStyles.secondary ||
-                ButtonStyles.cancel =>
-                  AppColors.primaryColor.withOpacity(.05),
+                ButtonStyles.primary || ButtonStyles.secondary || ButtonStyles.cancel => AppColors.primaryColor.withOpacity(.05),
               },
             ),
             fixedSize: WidgetStateProperty.resolveWith(

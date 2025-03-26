@@ -1,6 +1,6 @@
-# 📦 Hancod Theme Package
+# 📦 My Themes Package
 
-The **Hancod Theme Package** is designed to streamline the development process
+The **My Themes Package** is designed to streamline the development process
 in fast-paced work environments. It provides a collection of reusable components
 such as buttons, forms, and themes, enabling developers to build consistent and
 visually appealing interfaces with minimal effort.
@@ -15,9 +15,9 @@ visually appealing interfaces with minimal effort.
 
 ```yaml
 dependencies:
-  hancod_theme:
+  my_themes:
     git:
-      url: https://github.com/Hancod-Digital/hancod_theme.git
+      url: https://github.com/your-organization/my_themes.git
       ref: your-project-branch
 ```
 
@@ -33,4 +33,4 @@ dependencies:
 ---
 
 This section encourages collaboration, customization, and the use of examples,
-ensuring that developers make the most out of the **hancod_theme** package.
+ensuring that developers make the most out of the **my_themes** package.
